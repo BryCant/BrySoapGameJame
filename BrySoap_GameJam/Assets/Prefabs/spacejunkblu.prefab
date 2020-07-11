@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6604825121203493275}
   - component: {fileID: 729372385}
   - component: {fileID: -361108069894178825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spacejunkblu
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -950,7 +950,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
