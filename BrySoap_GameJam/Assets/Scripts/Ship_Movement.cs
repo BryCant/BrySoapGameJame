@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Ship_Movement : MonoBehaviour
 {
-    public Transform Booster1;
-    public Transform Booster2;
-    public Transform Booster3;
-    public Transform Booster4;
-
     private Vector3 V3_Zero = Vector3.zero;
 
     public Rigidbody2D ship_rb;
-    public GameObject g_wave;
-    public GameObject o_wave;
-    public GameObject p_wave;
-    public GameObject y_wave;
+
+    public Animator b1Anim;
+    public Animator b2Anim;
+    public Animator b3Anim;
+    public Animator b4Anim;
 
     float horizontalAxis = 0f;
     float verticalAxis = 0f;
@@ -31,28 +27,37 @@ public class Ship_Movement : MonoBehaviour
 
         if (horizontalAxis < 0)
         {
-            Instantiate(p_wave, Booster2.position, Booster2.rotation);
+            b1Anim.SetBool("B1Boosted", true);
         }
         else if (horizontalAxis > 0)
         {
-            Instantiate(o_wave, Booster4.position, Booster4.rotation);
+            b2Anim.SetBool("B2Boosted", true);
         }
 
         if (verticalAxis < 0)
         {
-            Instantiate(g_wave, Booster1.position, Booster1.rotation);
+            b3Anim.SetBool("B3Boosted", true);
         }
         else if (verticalAxis > 0)
         {
-            Instantiate(y_wave, Booster3.position, Booster3.rotation);
+            b4Anim.SetBool("B4Boosted", true);
         }
+    }
+
+    void ResetBoosters()
+    {
+        b1Anim.SetBool("B1Boosted", false);
+        b1Anim.SetBool("B1Boosted", false);
+        b1Anim.SetBool("B1Boosted", false);
+        b1Anim.SetBool("B1Boosted", false);
+
     }
 
     void FixedUpdate()
     {
         Vector3 targetVelocity = new Vector2(horizontalAxis * Time.fixedDeltaTime * 10f, verticalAxis * Time.fixedDeltaTime * 10f);
         ship_rb.velocity = Vector3.SmoothDamp(ship_rb.velocity, targetVelocity, ref V3_Zero, floatiness);
-
+        ResetBoosters();
     }
 
 }
