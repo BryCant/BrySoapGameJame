@@ -12,7 +12,10 @@ public class Ship_Movement : MonoBehaviour
     private Vector3 V3_Zero = Vector3.zero;
 
     public Rigidbody2D ship_rb;
-    public GameObject boostPrefab;
+    public GameObject g_wave;
+    public GameObject o_wave;
+    public GameObject p_wave;
+    public GameObject y_wave;
 
     float horizontalAxis = 0f;
     float verticalAxis = 0f;
@@ -28,20 +31,20 @@ public class Ship_Movement : MonoBehaviour
 
         if (horizontalAxis < 0)
         {
-            Instantiate(boostPrefab, Booster2.position, Booster2.rotation);
+            Instantiate(p_wave, Booster2.position, Booster2.rotation);
         }
         else if (horizontalAxis > 0)
         {
-            Instantiate(boostPrefab, Booster4.position, Booster4.rotation);
+            Instantiate(o_wave, Booster4.position, Booster4.rotation);
         }
 
         if (verticalAxis < 0)
         {
-            Instantiate(boostPrefab, Booster1.position, Booster1.rotation);
+            Instantiate(g_wave, Booster1.position, Booster1.rotation);
         }
         else if (verticalAxis > 0)
         {
-            Instantiate(boostPrefab, Booster3.position, Booster3.rotation);
+            Instantiate(y_wave, Booster3.position, Booster3.rotation);
         }
     }
 
