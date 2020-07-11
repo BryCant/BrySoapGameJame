@@ -44,3 +44,6 @@ TagManager:
   - name: ShipLayer
     uniqueID: 997234125
     locked: 0
+  - name: New Layer
+    uniqueID: 249253271
+    locked: 0
