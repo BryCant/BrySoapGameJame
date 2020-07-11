@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 575749332500267252}
   - component: {fileID: 6604825121203493275}
   - component: {fileID: 729372385}
+  - component: {fileID: -361108069894178825}
   m_Layer: 0
   m_Name: spacejunkblu
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942061225177762269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.51, y: 0.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.19560954, y: 0.19560954, z: 0.19560954}
   m_Children: []
   m_Father: {fileID: 0}
@@ -958,3 +959,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-361108069894178825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942061225177762269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b07c988903b8f4093be67003dfd6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 729372385}
+  obstacleSpeed: 3
