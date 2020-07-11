@@ -11,6 +11,12 @@ public class ObstacleBehaviour : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * -obstacleSpeed;
+
+        float randScale = Random.Range(.2f, .5f);
+        transform.localScale = new Vector3(randScale, randScale, randScale);
+
+        float randRot = Random.Range(0f, 359f);
+        transform.Rotate(0f, 0.0f, randRot, Space.Self);
     }
 
     // Update is called once per frame

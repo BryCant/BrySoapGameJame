@@ -26,7 +26,7 @@ public class ObstacleSpawner : MonoBehaviour
     void SpawnObstacles()
     {
         int chosenObstacle = Random.Range(0, obLength);
-        Vector3 randPos = transform.position + new Vector3(0, Random.Range(0, 10), 0);
+        Vector3 randPos = transform.position + new Vector3(0, Random.Range(1, 10), 0);
         if (chosenObstacle == 0)
         {
             Instantiate(obstacle1, randPos, transform.rotation);
