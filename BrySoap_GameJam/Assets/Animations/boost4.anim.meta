@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:BrySoap_GameJam/Assets/Animations/Booster3.controller.meta
+guid: 350e78ad98814174fa15b20320edc77e
+=======
 guid: a70d4417955c8484081c5eee993885e7
+>>>>>>> 444d6420629a70ce10c74293cd7802728d44094c:BrySoap_GameJam/Assets/Animations/boost4.anim.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

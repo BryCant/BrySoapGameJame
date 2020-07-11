@@ -27,29 +27,29 @@ public class Ship_Movement : MonoBehaviour
 
         if (horizontalAxis < 0)
         {
-            b1Anim.SetBool("B1Boosted", true);
+            b2Anim.SetBool("B2Boosted", true);
         }
         else if (horizontalAxis > 0)
         {
-            b2Anim.SetBool("B2Boosted", true);
+            b4Anim.SetBool("B4Boosted", true);
         }
 
         if (verticalAxis < 0)
         {
-            b3Anim.SetBool("B3Boosted", true);
+            b1Anim.SetBool("B1Boosted", true);
         }
         else if (verticalAxis > 0)
         {
-            b4Anim.SetBool("B4Boosted", true);
+            b3Anim.SetBool("B3Boosted", true);
         }
     }
 
     void ResetBoosters()
     {
         b1Anim.SetBool("B1Boosted", false);
-        b1Anim.SetBool("B1Boosted", false);
-        b1Anim.SetBool("B1Boosted", false);
-        b1Anim.SetBool("B1Boosted", false);
+        b2Anim.SetBool("B2Boosted", false);
+        b3Anim.SetBool("B3Boosted", false);
+        b4Anim.SetBool("B4Boosted", false);
 
     }
 
