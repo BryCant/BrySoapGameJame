@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 258245964}
   - component: {fileID: 258245968}
   - component: {fileID: 258245969}
+  - component: {fileID: 258245970}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -221,7 +222,7 @@ SpriteRenderer:
   m_SortingLayerID: 997234125
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b7c9d27c8f762448e9a5caad5e310f4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78afff2d13f79497ba05971688db67f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -742,6 +743,25 @@ MonoBehaviour:
   obstacle2: {fileID: 0}
   spawnTimeInc: 10
   obLength: 0
+--- !u!95 &258245970
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258245963}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a7cf73ce7e574e98a5e665d08e033db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &375047295
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +1002,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: fc6a66ef37aa24e1fbafef93f6f5e61b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21175c5a2badc43a385dce319bd44c61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1475,7 +1495,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: fc6a66ef37aa24e1fbafef93f6f5e61b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21175c5a2badc43a385dce319bd44c61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1723,6 +1743,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystal1
       objectReference: {fileID: 0}
+    - target: {fileID: 7044971805714040659, guid: e96321ec1bda7496094d2634146fa632,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b552d1a2a201a4742aeb662ea553f0b4,
+        type: 3}
     - target: {fileID: 7044971805714040668, guid: e96321ec1bda7496094d2634146fa632,
         type: 3}
       propertyPath: m_LocalPosition.x
