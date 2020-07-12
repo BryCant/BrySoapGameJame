@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2656370101076409730}
   - component: {fileID: 1457664785894201637}
   - component: {fileID: 8791298445213645953}
+  - component: {fileID: 5265556080684448597}
   m_Layer: 8
   m_Name: spacejunkpur
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -580,6 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2656370101076409730}
+  anim: {fileID: 5265556080684448597}
   obstacleSpeed: 3
 --- !u!68 &8791298445213645953
 EdgeCollider2D:
@@ -608,4 +610,23 @@ EdgeCollider2D:
   - {x: 0.61954796, y: -1.4977103}
   - {x: 0.24607325, y: -0.80895793}
   - {x: -1.3261346, y: -2.4385107}
-  - {x: -3.1964397, y: -1.5924234}
+  - {x: -3.2053344, y: -1.6457926}
+--- !u!95 &5265556080684448597
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858518647891331019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 171545d7b741eec4985d76f220cc03fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -19,7 +19,7 @@ public class Ship_Movement : MonoBehaviour
     public float floatiness = 1f;
     public float boostSpeed = 30f;
 
-    private int glitchVersion = 0;
+    public int glitchVersion = 0;
 
     // Update is called once per frame
     void Update()
@@ -105,6 +105,10 @@ public class Ship_Movement : MonoBehaviour
         {
             Debug.Log("Ship Hit");
             Glitch();
+        }
+        if (other.gameObject.CompareTag("Crystal"))
+        {
+            glitchVersion = 0;
         }
     }
 

@@ -6,6 +6,7 @@ public class ObstacleBehaviour : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    public Animator anim;
     public float obstacleSpeed = 5f;
 
     void Start()
@@ -20,11 +21,11 @@ public class ObstacleBehaviour : MonoBehaviour
         float randRot = Random.Range(0f, 359f);
         transform.Rotate(0f, 0.0f, randRot, Space.Self);
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator GoByeBye()
     {
-
+        anim.SetBool("IsHit", true);
+        yield return new WaitForSeconds(.3f);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -33,9 +34,9 @@ public class ObstacleBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        /*else if (other.gameObject.CompareTag("platform"))
+        else if (other.gameObject.CompareTag("Pew"))
         {
-            Destroy(gameObject);
-        }*/
+            StartCoroutine(GoByeBye());
+        }
     }
 }

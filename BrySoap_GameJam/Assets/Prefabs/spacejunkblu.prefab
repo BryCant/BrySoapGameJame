@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 729372385}
   - component: {fileID: -361108069894178825}
   - component: {fileID: 5290817890023036118}
+  - component: {fileID: 4310276313022313190}
   m_Layer: 8
   m_Name: spacejunkblu
   m_TagString: Obstacle
@@ -973,6 +974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 729372385}
+  anim: {fileID: 4310276313022313190}
   obstacleSpeed: 3
 --- !u!68 &5290817890023036118
 EdgeCollider2D:
@@ -997,4 +999,23 @@ EdgeCollider2D:
   - {x: 2.0172489, y: 2.0584188}
   - {x: 3.2277377, y: 0.31759605}
   - {x: 2.4839017, y: -3.1568058}
-  - {x: -2.035487, y: -2.2650845}
+  - {x: -1.8771769, y: -2.288831}
+--- !u!95 &4310276313022313190
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942061225177762269}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d250d34aab0f7645b7c6afc9db12e9e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
