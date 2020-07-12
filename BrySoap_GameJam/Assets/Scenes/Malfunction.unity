@@ -1546,6 +1546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb508e305e95acc4487e1d6956fff493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutScreen: {fileID: 0}
 --- !u!4 &329221530
 Transform:
   m_ObjectHideFlags: 0
@@ -4658,7 +4659,7 @@ GameObject:
   - component: {fileID: 2132879976}
   - component: {fileID: 2132879975}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

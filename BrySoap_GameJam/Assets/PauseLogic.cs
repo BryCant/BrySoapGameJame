@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PauseLogic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject tutScreen;
+
+    public void Restart()
     {
-        
+        SceneManager.LoadScene(1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadTut()
     {
-        
+        tutScreen.SetActive(true);
+    }
+
+    public void EndTut()
+    {
+        tutScreen.SetActive(false);
     }
 }
