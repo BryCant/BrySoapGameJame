@@ -19,6 +19,10 @@ public class RewardSystem : MonoBehaviour
         fb.SetFuel(MAX_CRYSTALS);
     }
 
+    IEnumerator GameOver() 
+    {
+        yield return new WaitForSeconds(.3f);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,6 +30,10 @@ public class RewardSystem : MonoBehaviour
         {
             fb.currentCrystals++;
             fb.SetFuel(fb.currentCrystals);
+        }
+        else if (other.gameObject.CompareTag("Crystal") && fb.currentCrystals == 0)
+        {
+            StartCoroutine(GameOver());
         }
     }
 }

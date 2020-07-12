@@ -5,13 +5,20 @@ using UnityEngine;
 
 public class HomeLogic : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            SceneManager.LoadScene(1);
+    public GameObject tutScreen;
 
-        }
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void LoadTut()
+    {
+        tutScreen.SetActive(true);
+    }
+
+    public void EndTut()
+    {
+        tutScreen.SetActive(false);
     }
 }
