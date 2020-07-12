@@ -9,6 +9,7 @@ public class RewardSystem : MonoBehaviour
 
     // Initiate Rewards
     public int MAX_CRYSTALS = 10;
+    public GameObject gameOverScreen;
 
 
     public FuelBar fb;
@@ -21,7 +22,12 @@ public class RewardSystem : MonoBehaviour
 
     IEnumerator GameOver() 
     {
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(4f);
+        if(fb.currentCrystals == 0)
+        {
+            Time.timeScale = 0;
+            gameOverScreen.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

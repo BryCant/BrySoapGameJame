@@ -41,4 +41,5 @@ public class PauseLogic : MonoBehaviour
         Time.timeScale = 0;
         tutScreen.SetActive(false);
     }
+
 }
