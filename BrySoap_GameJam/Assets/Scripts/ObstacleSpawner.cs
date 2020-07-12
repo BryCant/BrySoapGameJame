@@ -19,6 +19,7 @@ public class ObstacleSpawner : MonoBehaviour
         if (Time.time >= spawnTime)
         {
             spawnTime = Time.time + spawnTimeInc;
+            spawnTimeInc -= .01f;
             SpawnObstacles();
         }
     }
