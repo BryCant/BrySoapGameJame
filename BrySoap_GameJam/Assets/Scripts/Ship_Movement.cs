@@ -14,6 +14,8 @@ public class Ship_Movement : MonoBehaviour
     public Animator b3Anim;
     public Animator b4Anim;
 
+    public FuelBar fb;
+
     float horizontalAxis = 0f;
     float verticalAxis = 0f;
     public float floatiness = 1f;
@@ -21,8 +23,16 @@ public class Ship_Movement : MonoBehaviour
 
     public int glitchVersion = 0;
 
-    // Update is called once per frame
-    void Update()
+    public int fuelBarDelay = 10;
+    private int initFuelBarDelay;
+
+    private void Start()
+    {
+        initFuelBarDelay = fuelBarDelay;
+    }
+
+// Update is called once per frame
+void Update()
     {
         // Ship Control
         switch (glitchVersion)
@@ -54,22 +64,43 @@ public class Ship_Movement : MonoBehaviour
 
         }
 
-        if (horizontalAxis < 0)
+        if(fb.currentCrystals > 0)
         {
-            b2Anim.SetBool("B2Boosted", true);
-        }
-        else if (horizontalAxis > 0)
-        {
-            b4Anim.SetBool("B4Boosted", true);
-        }
+            if (horizontalAxis < 0)
+            {
+                b2Anim.SetBool("B2Boosted", true);
+                UpdateFuelBare();
+            }
+            else if (horizontalAxis > 0)
+            {
+                b4Anim.SetBool("B4Boosted", true);
+                UpdateFuelBare();
+            }
 
-        if (verticalAxis < 0)
-        {
-            b1Anim.SetBool("B1Boosted", true);
+            if (verticalAxis < 0)
+            {
+                b1Anim.SetBool("B1Boosted", true);
+                UpdateFuelBare();
+            }
+            else if (verticalAxis > 0)
+            {
+                b3Anim.SetBool("B3Boosted", true);
+                UpdateFuelBare();
+            }
         }
-        else if (verticalAxis > 0)
+    }
+
+    void UpdateFuelBare()
+    {
+        if(fuelBarDelay > 0)
         {
-            b3Anim.SetBool("B3Boosted", true);
+            fuelBarDelay--;
+        }
+        else
+        {
+            fb.currentCrystals--;
+            fb.SetFuel(fb.currentCrystals);
+            fuelBarDelay = initFuelBarDelay;
         }
     }
 
@@ -92,8 +123,11 @@ public class Ship_Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 targetVelocity = new Vector2(horizontalAxis * Time.fixedDeltaTime * 10f, verticalAxis * Time.fixedDeltaTime * 10f);
-        ship_rb.velocity = Vector3.SmoothDamp(ship_rb.velocity, targetVelocity, ref V3_Zero, floatiness);
+        if(fb.currentCrystals > 0)
+        {
+            Vector3 targetVelocity = new Vector2(horizontalAxis * Time.fixedDeltaTime * 10f, verticalAxis * Time.fixedDeltaTime * 10f);
+            ship_rb.velocity = Vector3.SmoothDamp(ship_rb.velocity, targetVelocity, ref V3_Zero, floatiness);
+        }
         ResetBoosters();
         shipAnim.SetBool("IsGlitching", false);
 
