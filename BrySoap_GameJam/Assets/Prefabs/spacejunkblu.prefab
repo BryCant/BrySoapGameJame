@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6604825121203493275}
   - component: {fileID: 729372385}
   - component: {fileID: -361108069894178825}
+  - component: {fileID: 5290817890023036118}
   m_Layer: 8
   m_Name: spacejunkblu
   m_TagString: Obstacle
@@ -973,3 +974,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 729372385}
   obstacleSpeed: 3
+--- !u!68 &5290817890023036118
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942061225177762269}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.9088846, y: -2.2650847}
+  - {x: -3.5112696, y: -0.7501333}
+  - {x: -1.7018871, y: 2.9097214}
+  - {x: 0.5485212, y: 2.7556872}
+  - {x: 2.0172489, y: 2.0584188}
+  - {x: 3.2277377, y: 0.31759605}
+  - {x: 2.4839017, y: -3.1568058}
+  - {x: -2.035487, y: -2.2650845}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1286445761924814466}
   - component: {fileID: 2656370101076409730}
   - component: {fileID: 1457664785894201637}
+  - component: {fileID: 8791298445213645953}
   m_Layer: 8
   m_Name: spacejunkpur
   m_TagString: Untagged
@@ -580,3 +581,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2656370101076409730}
   obstacleSpeed: 3
+--- !u!68 &8791298445213645953
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858518647891331019}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -3.2151566, y: -1.6343291}
+  - {x: -3.0466952, y: 0.59738016}
+  - {x: -1.704375, y: 0.9815341}
+  - {x: -1.5516477, y: 2.43301}
+  - {x: 2.1563935, y: 2.4209542}
+  - {x: 1.294803, y: 0.9551067}
+  - {x: 3.0011194, y: 0.9630216}
+  - {x: 2.8953815, y: -1.7431762}
+  - {x: 0.61954796, y: -1.4977103}
+  - {x: 0.24607325, y: -0.80895793}
+  - {x: -1.3261346, y: -2.4385107}
+  - {x: -3.1964397, y: -1.5924234}

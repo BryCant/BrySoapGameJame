@@ -270,7 +270,6 @@ GameObject:
   - component: {fileID: 258245966}
   - component: {fileID: 258245965}
   - component: {fileID: 258245964}
-  - component: {fileID: 258245969}
   - component: {fileID: 258245970}
   - component: {fileID: 258245968}
   m_Layer: 0
@@ -314,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship_rb: {fileID: 258245964}
+  shipAnim: {fileID: 258245970}
   b1Anim: {fileID: 1969046507}
   b2Anim: {fileID: 1914569661}
   b3Anim: {fileID: 375047297}
@@ -1059,39 +1059,6 @@ PolygonCollider2D:
       - {x: 0.71, y: 1.05}
       - {x: 0.71, y: 1.02}
       - {x: 0.13, y: 1.02}
---- !u!68 &258245969
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258245963}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -2.8255296, y: -0.7561374}
-  - {x: -2.744317, y: 0.8377236}
-  - {x: -2.3249722, y: 1.0364288}
-  - {x: -0.74665546, y: 0.6695068}
-  - {x: -1.0160184, y: 2.1569104}
-  - {x: -0.60719967, y: 2.4975467}
-  - {x: 0.9353304, y: 2.3093696}
-  - {x: 0.7873678, y: 0.6371951}
-  - {x: 2.334094, y: 0.7771802}
-  - {x: 2.3639822, y: -0.77884436}
-  - {x: 0.81477165, y: -0.5725312}
-  - {x: 1.0308337, y: -2.208438}
-  - {x: -0.59670687, y: -2.460227}
-  - {x: -1.0134578, y: -2.1231437}
-  - {x: -0.7504153, y: -0.57372093}
-  - {x: -2.3825073, y: -0.9069979}
-  - {x: -2.8340507, y: -0.73322535}
 --- !u!95 &258245970
 Animator:
   serializedVersion: 3
@@ -1245,7 +1212,7 @@ MonoBehaviour:
     type: 3}
   obstacle2: {fileID: 6858518647891331019, guid: c8972872c1053428a956c50329766707,
     type: 3}
-  spawnTimeInc: 1
+  spawnTimeInc: 5
   obLength: 2
 --- !u!4 &458679389
 Transform:
