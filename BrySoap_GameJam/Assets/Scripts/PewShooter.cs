@@ -40,8 +40,8 @@ public class PewShooter : MonoBehaviour
         if (other.gameObject.CompareTag("Crystal") && mb.currentMissiles < MAX_MISSILES)
         {
             mb.currentMissiles++;
-            int randReward = Random.Range(mb.currentMissiles, MAX_MISSILES);
-            mb.SetMissile(mb.currentMissiles);
+            int randReward = Random.Range(0, (MAX_MISSILES - mb.currentMissiles));
+            mb.SetMissile(randReward);
         }
     }
 }

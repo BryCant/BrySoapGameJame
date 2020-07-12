@@ -38,28 +38,29 @@ void Update()
         switch (glitchVersion)
         {
             case 0:
-                horizontalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * 10f;
+                // Regular
+                horizontalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * 10f;  // Regular
                 verticalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * 10f;
                 break;
             case 1:
-                horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * 10f;
-                verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * 10f;
+                horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * 10f;    //        RIGHT
+                verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * 10f;    //  DOWN  LEFT  UP
                 break;
             case 2:
-                horizontalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * -10f;
-                verticalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * -10f;
+                horizontalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * -10f; //        DOWN
+                verticalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * -10f;     //  RIGHT  UP  LEFT
                 break;
             case 3:
-                horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * -10f;
-                verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * -10f;
+                horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * -10f;   //        RIGHT
+                verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * -10f;   //  UP  LEFT  DOWN
                 break;
             case 4:
-                horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * -10f;
-                verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * 10f;
+                horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * -10f;   //     RIGHT
+                verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * 10f;    //  UP LEFT DOWN
                 break;
             case 5:
-                horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * 10f;
-                verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * -10f;
+                horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * 10f;    //         LEFT
+                verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * -10f;   //  DOWN  RIGHT  UP
                 break;
 
         }
