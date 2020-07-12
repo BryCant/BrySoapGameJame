@@ -11,6 +11,7 @@ public class ObstacleBehaviour : MonoBehaviour
     void Start()
     {
         Physics2D.IgnoreLayerCollision(8, 8);
+        Physics2D.IgnoreLayerCollision(8, 9);
         rb.velocity = transform.right * -obstacleSpeed;
 
         float randScale = Random.Range(.2f, .5f);
