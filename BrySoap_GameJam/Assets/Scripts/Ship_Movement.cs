@@ -13,6 +13,8 @@ public class Ship_Movement : MonoBehaviour
     public Animator b2Anim;
     public Animator b3Anim;
     public Animator b4Anim;
+    public Animator mapAnim;
+
 
     public FuelBar fb;
 
@@ -41,26 +43,32 @@ void Update()
                 // Regular
                 horizontalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * 10f;  // Regular
                 verticalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * 10f;
+                mapAnim.SetInteger("vNum", 1);
                 break;
             case 1:
                 horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * 10f;    //        RIGHT
                 verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * 10f;    //  DOWN  LEFT  UP
+                mapAnim.SetInteger("vNum", 2);
                 break;
             case 2:
                 horizontalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * -10f; //        DOWN
                 verticalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * -10f;     //  RIGHT  UP  LEFT
+                mapAnim.SetInteger("vNum", 3);
                 break;
             case 3:
                 horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * -10f;   //        RIGHT
                 verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * -10f;   //  UP  LEFT  DOWN
+                mapAnim.SetInteger("vNum", 4);
                 break;
             case 4:
                 horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * -10f;   //     RIGHT
                 verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * 10f;    //  UP LEFT DOWN
+                mapAnim.SetInteger("vNum", 5);
                 break;
             case 5:
                 horizontalAxis = Input.GetAxisRaw("Vertical") * boostSpeed * 10f;    //         LEFT
                 verticalAxis = Input.GetAxisRaw("Horizontal") * boostSpeed * -10f;   //  DOWN  RIGHT  UP
+                mapAnim.SetInteger("vNum", 6);
                 break;
 
         }
