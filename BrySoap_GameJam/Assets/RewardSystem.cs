@@ -17,6 +17,13 @@ public class RewardSystem : MonoBehaviour
 
     public FuelBar fb;
 
+    public AudioClip explosionSound;
+    AudioSource mySound;
+
+    private void Awake()
+    {
+        mySound = GetComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -34,12 +41,14 @@ public class RewardSystem : MonoBehaviour
 
     IEnumerator GameOver() 
     {
-        yield return new WaitForSeconds(6f);
-        if(fb.currentCrystals == 0)
+        yield return new WaitForSeconds(1f);
+
+        mySound.PlayOneShot(explosionSound, 0.4f);
+
+        if (fb.currentCrystals == 0)
         {
             Time.timeScale = 0;
             gameOverScreen.SetActive(true);
-
         }
     }
 

@@ -6,6 +6,7 @@ public class Ship_Movement : MonoBehaviour
 {
     private Vector3 V3_Zero = Vector3.zero;
 
+
     public Rigidbody2D ship_rb;
 
     public Animator shipAnim;
@@ -23,20 +24,20 @@ public class Ship_Movement : MonoBehaviour
     public float floatiness = 1f;
     public float boostSpeed = 30f;
 
-    public int glitchVersion = 0;
+    public int glitchVersion = 0; // Values from 0 - 5 decide the controls
 
-    public int fuelBarDelay = 10;
-    private int initFuelBarDelay;
+    public int fuelBarDelay = 10; // Clicks/Taps before the fuelbar decreases
+    private int initFuelBarDelay; // Used to keep value of chosen delay to reset after each decrease
 
     private void Start()
     {
-        initFuelBarDelay = fuelBarDelay;
+        initFuelBarDelay = fuelBarDelay; // Assign chosen delay time for later use
     }
 
-// Update is called once per frame
-void Update()
+    // Update is called once per frame
+    void Update()
     {
-        // Ship Control
+        // Ship Controls Decisions
         switch (glitchVersion)
         {
             case 0:
@@ -73,7 +74,8 @@ void Update()
 
         }
 
-        if(fb.currentCrystals > 0)
+        // Show Boost Information with chosen controls
+        if(fb.currentCrystals > 0) // Check for fuel
         {
             if (horizontalAxis < 0)
             {

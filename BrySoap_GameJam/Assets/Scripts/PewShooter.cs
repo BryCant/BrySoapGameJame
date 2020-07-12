@@ -11,6 +11,14 @@ public class PewShooter : MonoBehaviour
 
     public int MAX_MISSILES = 5;
 
+    public AudioClip pewSound;
+    AudioSource mySound;
+
+    private void Awake()
+    {
+        mySound = GetComponent<AudioSource>();
+    }
+
     private void Start()
     {
         mb.SetMissile(MAX_MISSILES);
@@ -20,7 +28,7 @@ public class PewShooter : MonoBehaviour
     void Update()
     {
         // TODO Make Fire random as well
-        if (Input.GetButtonDown("Fire1") && mb.currentMissiles > 0)
+        if (Input.GetButtonDown("Fire1") && mb.currentMissiles > 0 && Time.timeScale != 0.0f)
         {
             Shoot();
         }
@@ -32,6 +40,8 @@ public class PewShooter : MonoBehaviour
         mb.currentMissiles--;
         mb.SetMissile(mb.currentMissiles);
         Instantiate(pewPrefab, pewPoint.position, pewPoint.rotation);
+
+        mySound.PlayOneShot(pewSound, 0.4f);
 
     }
 
